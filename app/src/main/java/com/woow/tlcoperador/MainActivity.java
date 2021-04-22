@@ -54,13 +54,13 @@ public class MainActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         String ci_operador_ingreso = extras.getString("ci_operador");
         String nombre_operador_ingreso = extras.getString("nombre_operador");
-
+/*
         Fragment fragment = new Fragment();
         Bundle bundle = new Bundle();
         bundle.putString("ci_operador_main", ci_operador_ingreso);
         fragment.setArguments(bundle);
 
-/*
+
        //Creamos un bundle para pasarle los datos al fragment
         Bundle bundle_frag = new Bundle();
         bundle_frag.putString("ci_operador_frag", ci_operador_ingreso);

@@ -41,31 +41,32 @@
         tools:ignore="MissingConstraints">
 
         <Button
-            android:id="@+id/BtnPlus"
+            android:id="@+id/btnSumar"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:background="@drawable/boton_redondo"
-            android:text="BtnPlus"
+            android:text="+"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="213dp" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/tVCantidadLugares"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="10"
             android:textAlignment="center"
             android:textSize="60dp"
+            android:inputType="number"
+            android:textColor="@color/white"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/BtnSup"
+            android:id="@+id/btnRestar"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:background="@drawable/boton_redondo"
-            android:text="BtnSup"
+            android:text="-"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
 

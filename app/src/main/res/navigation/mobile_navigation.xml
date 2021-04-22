@@ -15,11 +15,16 @@
         android:id="@+id/nav_gallery"
         android:name="com.woow.tlcoperador.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_profile" />
 
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="com.woow.tlcoperador.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/monederoFragment"
+        android:name="com.woow.tlcoperador.ui.Monedero.MonederoFragment"
+        android:label="fragment_monedero"
+        tools:layout="@layout/fragment_monedero" />
 </navigation>

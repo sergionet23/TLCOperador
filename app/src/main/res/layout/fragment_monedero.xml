@@ -5,7 +5,103 @@
     android:layout_height="match_parent"
     tools:context=".ui.Monedero.MonederoFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- Rectangle 19 -->
+    <View
+        android:id="@+id/rectangle_1"
+        android:layout_width="match_parent"
+        android:layout_height="197dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/rectangle_1"
+        android:elevation="19dp" />
+
+    <!-- Monedero -->
+    <TextView
+        android:id="@+id/monedero"
+        android:layout_width="95dp"
+        android:layout_height="32dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="28dp"
+        android:layout_centerVertical="true"
+        android:text="@string/monedero"
+        android:fontFeatureSettings="pnum, lnum"
+        android:lineSpacingExtra="9sp"
+        android:translationY="-4.28sp"
+        android:gravity="right|top"
+        />
+
+    <TextView
+        android:id="@+id/tv_total"
+        android:layout_width="77dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="268dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="238dp"
+        android:textAppearance="@style/some_id"
+        android:lineSpacingExtra="5sp"
+        android:translationY="-2.62sp"
+        android:gravity="right|top" />
+
+    <View
+        android:id="@+id/receive_tra"
+        android:layout_width="327dp"
+        android:layout_height="91dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="205dp"
+        android:background="#00000000"
+        />
+
+    <TextView
+        android:id="@+id/tarjeta"
+        android:layout_width="58dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="76dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="228dp"
+        android:text="@string/some_id"
+        android:textAppearance="@style/some_id"
+        android:lineSpacingExtra="5sp"
+        android:translationY="-2.4sp"
+        android:gravity="top"
+        />
+
+    <TextView
+        android:id="@+id/total_trans"
+        android:layout_width="133dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="76dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="255dp"
+        android:text="@string/total_trans"
+        android:textAppearance="@style/total_trans"
+        android:lineSpacingExtra="4sp"
+        android:translationY="-1.8sp"
+        android:gravity="top"
+        />
+
+
+
+    <TextView
+        android:id="@+id/tv_nombre"
+        android:layout_width="123dp"
+        android:layout_height="32dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="132dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="99dp"
+        android:textAppearance="@style/luis_ramire"
+        android:fontFeatureSettings="pnum, lnum"
+        android:lineSpacingExtra="9sp"
+        android:translationY="-4.28sp"
+        android:gravity="right|top"
+        />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

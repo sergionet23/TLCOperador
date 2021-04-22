@@ -7,7 +7,11 @@ import android.view.Menu;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
+import com.woow.tlcoperador.ui.home.HomeFragment;
 
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -45,7 +49,38 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        //Aca recibimos la id del operador que ingreso
+        Bundle extras = getIntent().getExtras();
+        String ci_operador_ingreso = extras.getString("ci_operador");
+        String nombre_operador_ingreso = extras.getString("nombre_operador");
+
+        Fragment fragment = new Fragment();
+        Bundle bundle = new Bundle();
+        bundle.putString("ci_operador_main", ci_operador_ingreso);
+        fragment.setArguments(bundle);
+
+/*
+       //Creamos un bundle para pasarle los datos al fragment
+        Bundle bundle_frag = new Bundle();
+        bundle_frag.putString("ci_operador_frag", ci_operador_ingreso);
+        bundle_frag.putString("nombre_operador_frag", nombre_operador_ingreso);
+
+        //Colocamos este nuevo Bundle como argumento en el fragmento.
+        HomeFragment newFragment = new HomeFragment();
+        newFragment.setArguments(bundle_frag);
+
+        //Ahora le paso los datos
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.replace(R.id.nav_host_fragment_container , newFragment);
+        fragmentTransaction.commit();
+
+        */
+
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

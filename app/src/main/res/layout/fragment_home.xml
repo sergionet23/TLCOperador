@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:textAlignment="center"
-            android:textSize="60dp"
+            android:textSize="50dp"
             android:inputType="number"
             android:textColor="@color/white"
             android:textStyle="bold" />

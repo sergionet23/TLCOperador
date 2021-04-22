@@ -18,4 +18,6 @@
     <string name="btnIniciarSesion">Iniciar Sesion</string>
     <string name="btnResgistrarse">Registrarse</string>
     <string name="titulo_bienvenido">Bienvenido a\nTe Lo Cuido - Operadores</string>
+    <string name="some_id">**** 003</string>
+    <string name="total_trans">Total  transacciones del d\u00C3\u00ADa</string>
 </resources>

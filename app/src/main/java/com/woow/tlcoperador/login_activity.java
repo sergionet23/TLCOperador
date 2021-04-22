@@ -83,12 +83,12 @@ public class login_activity extends AppCompatActivity {
                                 Operadores operadorSeleccionado = operador.getValue(Operadores.class);
                                 String passw_operador = operadorSeleccionado.getPassword();
                                 String nombre_operador = operadorSeleccionado.getNombre();
-                                Integer ci_operador = operadorSeleccionado.getCI_operador();
+                                String ci_operador = operador.getKey();
 
 
                                 //Utilizo el if para verficar si la contraseña ingresada es correcta
                                 if (passw_operador.equals(editTcontrasena)) {
-                                    textVId_con.setText("Bienvenido a la mejor aplicacion!");
+                                    textVId_con.setText("Bienvenido a la mejor aplicacion! "+ ci_operador);
 
                                     //Paso los datos a la nueva activity, deberia ser el mapa
                                     Intent i = new Intent(login_activity.this, MainActivity.class);

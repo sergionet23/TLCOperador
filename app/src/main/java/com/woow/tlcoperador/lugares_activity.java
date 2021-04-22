@@ -30,6 +30,8 @@ public class lugares_activity extends AppCompatActivity {
     Button ButtonSumar, ButtonRestar;
     TextView textViewCantidadLugares;
 
+
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

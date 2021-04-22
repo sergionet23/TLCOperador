@@ -16,35 +16,7 @@
         android:elevation="19dp"
         tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/BtnPlus"
-        android:layout_width="137dp"
-        android:layout_height="80dp"
-        android:background="@drawable/boton_redondo"
-        android:text="BtnPlus"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="213dp" />
 
-    <Button
-        android:id="@+id/BtnSup"
-        android:layout_width="137dp"
-        android:layout_height="80dp"
-        android:background="@drawable/boton_redondo"
-        android:text="BtnSup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="528dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="10"
-        android:textSize="60dp"
-        android:textStyle="bold"
 
 
 
@@ -61,6 +33,53 @@
         tools:layout_editor_absoluteX="97dp"
         tools:layout_editor_absoluteY="666dp"
         tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="214dp"
+        android:layout_height="391dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rectangle_1"
+        app:layout_constraintVertical_bias="0.864"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/BtnPlus"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/boton_redondo"
+            android:text="BtnPlus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            tools:layout_editor_absoluteY="213dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="10"
+            android:textAlignment="center"
+
+            android:textSize="60dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/BtnSup"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/boton_redondo"
+            android:text="BtnSup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            tools:layout_editor_absoluteY="528dp" />
+
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

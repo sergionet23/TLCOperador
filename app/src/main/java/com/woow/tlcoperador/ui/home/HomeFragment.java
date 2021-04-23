@@ -33,10 +33,19 @@ public class HomeFragment extends Fragment {
     TextView textViewCantidadLugares;
 
     int cantidad_lugares_restantes;
+    String ci_operador_home;
     String ci_operador_key;
 
 
     private HomeViewModel homeViewModel;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if(getArguments() != null) {
+            ci_operador_home = getArguments().getString("ci_operador_frag");
+        }
+    }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -52,17 +61,18 @@ public class HomeFragment extends Fragment {
         textViewCantidadLugares = root.findViewById(R.id.tVCantidadLugares);
 
 
-    //    Bundle bundle = this.getArguments();
-  //      String ci_operador_home_frag = bundle.getString("ci_operador_main","no");
+
+     //   Bundle bundle = this.getArguments();
+   //     String ci_operador_home_frag = bundle.getString("ci_operador_main","no");
 
         //Recibo la info de la activity anterior
-         int ci_operador = 12345678 ;
-                //getArguments().getInt("ci_operador_frag",0);
+         String ci_operador = "12345678";
+        // getArguments().getString("ci_operador_frag");
         //String nombre_operador = getArguments().getString("nombre_operador_frag");
 
 
         //Busco los datos del operador que ingreso
-        Query query = refDatos.child("Operadores").orderByChild("CI_operador").equalTo(ci_operador);
+        Query query = refDatos.child("Operadores").orderByKey().equalTo(ci_operador);
         query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

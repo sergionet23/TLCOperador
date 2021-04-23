@@ -93,7 +93,7 @@ public class login_activity extends AppCompatActivity {
                                     //Paso los datos a la nueva activity, deberia ser el mapa
                                     Intent i = new Intent(login_activity.this, MainActivity.class);
                                     i.putExtra("nombre_operador", nombre_operador);
-                                    i.putExtra("ci_operador", ci_operador);
+                                    i.putExtra("ci_operador_login", ci_operador);
                                     startActivity(i);
 
                                 } else {

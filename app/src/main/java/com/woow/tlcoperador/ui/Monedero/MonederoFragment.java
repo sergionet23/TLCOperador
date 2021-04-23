@@ -2,65 +2,95 @@ package com.woow.tlcoperador.ui.Monedero;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.woow.tlcoperador.R;
+import com.woow.tlcoperador.model.Ocupar_lugar;
+import com.woow.tlcoperador.ui.home.HomeViewModel;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MonederoFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class MonederoFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private MonederoViewModel monederoViewModel;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    //Se crea variable para hacer referencia a la base de datos
+    DatabaseReference mRootReference = FirebaseDatabase.getInstance().getReference();
 
-    public MonederoFragment() {
-        // Required empty public constructor
-    }
+    //Variable que se va utilizar para consultar los datos a firebase
+    TextView textview_total, textview_nombre;
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment MonederoFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static MonederoFragment newInstance(String param1, String param2) {
-        MonederoFragment fragment = new MonederoFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    int total_propinas;
+
+
+    private HomeViewModel homeViewModel;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+
+
+
         }
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
+        homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_monedero, container, false);
+        View root_monedero = inflater.inflate(R.layout.fragment_monedero, container, false);
+
+
+        //Vinculo los campos del layout con las variables
+        textview_total = root_monedero.findViewById(R.id.tv_total);
+        textview_nombre = root_monedero.findViewById(R.id.tv_nombre);
+
+        //Recibo datos de la pantalla anterior
+        String ci_operador = "12345678";
+        String nombre_opera = "Yooo";
+
+        Query q = mRootReference.child("Ocupar_Lugar").orderByChild("CI_operador") .equalTo(ci_operador);
+        q.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    for (DataSnapshot transaccion : snapshot.getChildren()) {
+                        Ocupar_lugar transacciones = transaccion.getValue(Ocupar_lugar.class);
+                        int monto_propina = transacciones.getMonto_Propina();
+                        total_propinas = total_propinas+monto_propina;
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        textview_total.setText(" $"+total_propinas);
+        textview_nombre.setText(""+nombre_opera);
+
+        return root_monedero;
     }
 }

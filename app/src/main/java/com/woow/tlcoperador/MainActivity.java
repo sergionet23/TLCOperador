@@ -20,6 +20,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import static androidx.annotation.InspectableProperty.ValueType.RESOURCE_ID;
+
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
@@ -43,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_monedero)
+                R.id.nav_home,R.id.nav_monedero,  R.id.nav_gallery, R.id.nav_slideshow)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -52,31 +54,14 @@ public class MainActivity extends AppCompatActivity {
 
         //Aca recibimos la id del operador que ingreso
         Bundle extras = getIntent().getExtras();
-        String ci_operador_ingreso = extras.getString("ci_operador");
-        String nombre_operador_ingreso = extras.getString("nombre_operador");
-/*
-        Fragment fragment = new Fragment();
+        String ci_operador_ingreso = extras.getString("ci_operador_login");
+        // String nombre_operador_ingreso = extras.getString("nombre_operador");
+
+
         Bundle bundle = new Bundle();
-        bundle.putString("ci_operador_main", ci_operador_ingreso);
-        fragment.setArguments(bundle);
-
-
-       //Creamos un bundle para pasarle los datos al fragment
-        Bundle bundle_frag = new Bundle();
-        bundle_frag.putString("ci_operador_frag", ci_operador_ingreso);
-        bundle_frag.putString("nombre_operador_frag", nombre_operador_ingreso);
-
-        //Colocamos este nuevo Bundle como argumento en el fragmento.
-        HomeFragment newFragment = new HomeFragment();
-        newFragment.setArguments(bundle_frag);
-
-        //Ahora le paso los datos
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.replace(R.id.nav_host_fragment_container , newFragment);
-        fragmentTransaction.commit();
-
-        */
+        bundle.putString("ci_operador_frag", ci_operador_ingreso);
+        HomeFragment homeFragment = new HomeFragment();
+        homeFragment.setArguments(bundle);
 
     }
 

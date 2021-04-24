@@ -22,9 +22,10 @@
         android:name="com.woow.tlcoperador.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
     <fragment
-        android:id="@+id/monederoFragment"
+        android:id="@+id/nav_monedero"
         android:name="com.woow.tlcoperador.ui.Monedero.MonederoFragment"
-        android:label="fragment_monedero"
+        android:label="Monedero"
         tools:layout="@layout/fragment_monedero" />
 </navigation>

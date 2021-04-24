@@ -46,6 +46,8 @@
             android:layout_height="80dp"
             android:background="@drawable/boton_redondo"
             android:text="+"
+            android:textStyle="bold"
+            android:textSize="50dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="213dp" />
@@ -67,6 +69,8 @@
             android:layout_height="80dp"
             android:background="@drawable/boton_redondo"
             android:text="-"
+            android:textStyle="bold"
+            android:textSize="50dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
 

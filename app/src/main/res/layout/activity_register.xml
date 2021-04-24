@@ -7,23 +7,33 @@
     tools:context=".RegisterActivity">
 
     <!--android:background="@color/fondo"-->
+    <TextView
+        android:id="@+id/rectangle_1"
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/rectangle_1"
+        android:elevation="19dp"
+        tools:ignore="MissingConstraints" />
 
     <LinearLayout
-        android:layout_width="335dp"
-        android:layout_height="644dp"
+        android:layout_width="355dp"
+        android:layout_height="510dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_1"
+        app:layout_constraintVertical_bias="1.0">
 
         <TextView
             android:id="@+id/tv_mensaje_1"
             android:layout_width="match_parent"
             android:layout_height="49dp"
             android:text=""
-            android:textSize="15dp"/>
+            android:textSize="15dp" />
 
         <EditText
             android:id="@+id/eTcioperador"
@@ -70,18 +80,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            app:passwordToggleEnabled="true"
             android:hint="@string/register_contrasena"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            app:passwordToggleEnabled="true" />
 
         <EditText
             android:id="@+id/eTPassC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:passwordToggleEnabled="true"
             android:ems="10"
             android:hint="@string/register_contrasena2"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            app:passwordToggleEnabled="true" />
 
         <EditText
             android:id="@+id/eTTipo_operador"
@@ -91,7 +101,7 @@
             android:hint="@string/Tipo_operador"
             android:inputType="text" />
 
-   <!--     <EditText
+        <!--     <EditText
             android:id="@+id/eTNombre_ubicacion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -100,12 +110,12 @@
             android:inputType="text" />
 -->
         <Button
+            android:id="@+id/btnCrearOperador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/register_btnEnviarDatos"
             android:backgroundTint="@color/colorPrimary"
-            android:id="@+id/btnCrearOperador" />
+            android:text="@string/register_btnEnviarDatos" />
 
         <TextView
             android:id="@+id/tVmensaje"

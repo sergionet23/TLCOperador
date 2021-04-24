@@ -1,5 +1,6 @@
 package com.woow.tlcoperador;
 
+
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -7,11 +8,10 @@ import android.view.Menu;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
+import com.woow.tlcoperador.ui.Monedero.MonederoFragment;
 import com.woow.tlcoperador.ui.home.HomeFragment;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -55,13 +55,38 @@ public class MainActivity extends AppCompatActivity {
         //Aca recibimos la id del operador que ingreso
         Bundle extras = getIntent().getExtras();
         String ci_operador_ingreso = extras.getString("ci_operador_login");
-        // String nombre_operador_ingreso = extras.getString("nombre_operador");
+        String nombre_operador_ingreso = extras.getString("nombre_operador");
 
 
         Bundle bundle = new Bundle();
         bundle.putString("ci_operador_frag", ci_operador_ingreso);
         HomeFragment homeFragment = new HomeFragment();
         homeFragment.setArguments(bundle);
+/*
+        Bundle bundle_1 = new Bundle();
+        bundle_1.putString("ci_operador_frag", ci_operador_ingreso);
+        HomeFragment homeFragment_1 = new HomeFragment();
+        homeFragment_1.setArguments(bundle_1);
+
+        FragmentManager fm_1 = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fm_1.beginTransaction();
+        fragmentTransaction.replace(R.id.nav_host_fragment , homeFragment_1);
+        fragmentTransaction.commit();
+//
+
+        Bundle bundle = new Bundle();
+        bundle.putString("ci_operador_frag", ci_operador_ingreso);
+        MonederoFragment fraginfo = new MonederoFragment();
+        fraginfo.setArguments(bundle);
+
+         Bundle bundle = new Bundle();
+         String myMessage = "Stackoverflow is cool!";
+         bundle.putString("message", myMessage );
+         FragmentClass fragInfo = new FragmentClass();
+         fragInfo.setArguments(bundle);
+         transaction.replace(R.id.fragment_single, fragInfo);
+         transaction.commit();
+*/
 
     }
 

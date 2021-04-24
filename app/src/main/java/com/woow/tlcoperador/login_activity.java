@@ -35,6 +35,7 @@ public class login_activity extends AppCompatActivity {
     EditText eTcontrasena, eTcorreo;
     TextView textVId_con;
 
+    String editTcorreo, editTcontrasena;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,26 +50,27 @@ public class login_activity extends AppCompatActivity {
         textVId_con = findViewById(R.id.tvId_con);
 
 //PAra loguearme rapido mientras desarrollo
-        String mail = "alguien_1@mail.com";
-        String pass = "abc123";
+//        String mail = "alguien_1@mail.com";
+//        String pass = "abc123";
+
+        //PAra loguearme rapido mientras desarrollo
+//            String editTcorreo = mail.toString();
+//            String editTcontrasena = pass.toString();
+
+
 
         // Genero el evento al hacer click en el boton iniciar sesion
         mButtonLoginFirebase.setOnClickListener(v -> {
 
             //Transformo los datos ingresados en variables string
-       //     String editTcorreo = eTcorreo.getText().toString();
-         //   String editTcontrasena = eTcontrasena.getText().toString();
-
-            //PAra loguearme rapido mientras desarrollo
-            String editTcorreo = mail;
-            String editTcontrasena = pass;
+            editTcorreo = eTcorreo.getText().toString();
+            editTcontrasena = eTcontrasena.getText().toString();
 
             //Cierro el teclado
             cerrarTeclado();
 
             //Limpio los textbox
-            limpiarCajas();
-            if (editTcorreo.equals("") || editTcontrasena.equals("")) {
+            if (eTcorreo.equals("") || eTcontrasena.equals("")) {
                 validacion();
             } else {
                 //Poner variable en String para pasar la consulta
@@ -90,6 +92,7 @@ public class login_activity extends AppCompatActivity {
                                 if (passw_operador.equals(editTcontrasena)) {
                                     textVId_con.setText("Bienvenido a la mejor aplicacion! ");
 
+
                                     //Paso los datos a la nueva activity, deberia ser el mapa
                                     Intent i = new Intent(login_activity.this, MainActivity.class);
                                     i.putExtra("nombre_operador", nombre_operador);
@@ -97,11 +100,14 @@ public class login_activity extends AppCompatActivity {
                                     startActivity(i);
 
                                 } else {
-                                    limpiarCajas();
                                     textVId_con.setText("Usuario o contraseña incorrecta, intente nuevamente");
+                                    limpiarCajas();
                                 }
                             }
+                        }else{
+                            textVId_con.setText(""+editTcorreo+"-"+editTcontrasena);
                         }
+
                     }
 
                     @Override
@@ -149,7 +155,6 @@ public class login_activity extends AppCompatActivity {
     private void limpiarCajas() {
         eTcorreo.setText("");
         eTcontrasena.setText("");
-        textVId_con.setText("");
     }
 
 

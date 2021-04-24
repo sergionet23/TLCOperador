@@ -49,6 +49,8 @@ public class HomeFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+    //    String myValue = getArguments().getString ("ci_operador_frag");
+
         homeViewModel =
                 new ViewModelProvider(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
@@ -62,13 +64,15 @@ public class HomeFragment extends Fragment {
 
 
 
-     //   Bundle bundle = this.getArguments();
+
+        //   Bundle bundle = this.getArguments();
    //     String ci_operador_home_frag = bundle.getString("ci_operador_main","no");
 
         //Recibo la info de la activity anterior
          String ci_operador = "12345678";
         // getArguments().getString("ci_operador_frag");
         //String nombre_operador = getArguments().getString("nombre_operador_frag");
+
 
 
         //Busco los datos del operador que ingreso

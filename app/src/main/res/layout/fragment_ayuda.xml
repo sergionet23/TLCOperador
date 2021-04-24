@@ -5,36 +5,42 @@
     android:layout_height="match_parent"
     tools:context=".ui.help.AyudaFragment">
 
-    <TextView
-    android:id="@+id/rectangle_1"
-    android:layout_width="match_parent"
-    android:layout_height="126dp"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentTop="true"
-    android:background="@drawable/rectangle_1"
-    android:elevation="19dp"
-    tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextTextMultiLine"
-        android:layout_width="357dp"
-        android:layout_height="471dp"
+        android:layout_width="367dp"
+        android:layout_height="351dp"
+        android:layout_gravity="center"
         android:ems="10"
-        android:gravity="start|top"
         android:inputType="textMultiLine"
-        android:text="Id sea utamur aperiam, te per choro accusamus consulatu. Brute munere corrumpit ut pri. Ea ipsum appareat erroribus mea. Mei probo inani aliquid ad. Omnis fabulas concludaturque an vix, an noluisse takimata facilisis pro, sit te volumus mandamus. Ad malorum imperdiet duo, ea possim utamur accusamus vix.
+        android:text="ayuda:
+Gracias por confiar en TLC, para nosotros es un placer acompañarte
+FAQ:
+¿como saco la publididad?
+TLC fue, es y sera siempre gratuita para los usuarios. En busqueda de continuamente desarrollar una mejor experiencia de usuario nos apoyamos en nuestros compañeros comerciales para conseguirlo
+¿Porque no me figura el lugar ocupado cuando lo marco?
+Tanto ocupar como liberar lugar requiere de la confirmacion tanto tuya como del operador (cuidacoche o parking) de esa forma nos aseguramos que la informacion que se te muestre en la app sea fidedigna y en tiempo real
+¿Porque no puedo dejar de poner calificacion al salir de un lugar?
+En pos de mejorar la experiencia con los cuidacoches desde TLC brindamos una bonificaicon a los cuidacoches en base a su calificacion
+¿Puedo no dejar propina?
+Claro que si, usar TLC no obliga al usuario a dejar propina
+¿Puedo dejar propina en forma fisica y no virtual?
+Lo que tu acredites como propina sea de forma virtual o fisica es transferida de forma directa al cuidacoche
+¿Que pasa cuando denuncio al cuidacoche?
+TLC se reserva derecho de admision a operadores, ante una denuncia validada se dara de baja al mismo del sistema. TLC no va a realizar una denuncia legal ante ningun ente estatal"
+        tools:ignore="MissingConstraints"
 
-Est ei erat mucius quaeque. Ei his quas phaedrum, efficiantur mediocritatem ne sed, hinc oratio blandit ei sed. Blandit gloriatur eam et. Brute noluisse per et, verear disputando neglegentur at quo. Sea quem legere ei, unum soluta ne duo. Ludus complectitur quo te, ut vide autem homero pro.
-
-Meis vocent signiferumque pri et. Facilis corpora recusabo ne quo, eum ne eruditi blandit suscipiantur. Mazim sapientem sed id, sea debet commune iracundia in. Eius falli propriae te usu. In usu nonummy volumus expetenda, sint quando facilisis ei per, delectus constituto sea te.
-
-Senserit mediocrem vis ex, et dicunt deleniti gubergren mei. Mel id clita mollis repudiare. Sed ad nostro delicatissimi, postea pertinax est an. Adhuc sensibus percipitur sed te, eirmod tritani debitis nec ea. Cu vis quis gubergren.
-
-Virtute equidem ceteros in mel. Id volutpat neglegentur eos. Eu eum facilisis voluptatum, no eam albucius verterem. Sit congue platonem adolescens ut. Offendit reprimique et has, eu mei homero imperdiet.
-
-Lorem salutandi eu mea, eam in soleat iriure assentior. Tamquam lobortis id qui. Ea sanctus democritum mei, per eu alterum electram adversarium. Ea vix probo dicta iuvaret, posse epicurei suavitate eam an, nam et vidit menandri. Ut his accusata petentium."
         tools:layout_editor_absoluteX="24dp"
-        tools:layout_editor_absoluteY="161dp"
+        tools:layout_editor_absoluteY="161dp" />
+
+    <TextView
+        android:id="@+id/rectangle_1"
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/rectangle_1"
+        android:elevation="19dp"
         tools:ignore="MissingConstraints" />
 
 </FrameLayout >

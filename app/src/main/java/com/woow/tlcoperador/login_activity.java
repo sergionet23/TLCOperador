@@ -88,7 +88,7 @@ public class login_activity extends AppCompatActivity {
 
                                 //Utilizo el if para verficar si la contraseña ingresada es correcta
                                 if (passw_operador.equals(editTcontrasena)) {
-                                    textVId_con.setText("Bienvenido a la mejor aplicacion! "+ ci_operador);
+                                    textVId_con.setText("Bienvenido a la mejor aplicacion! ");
 
                                     //Paso los datos a la nueva activity, deberia ser el mapa
                                     Intent i = new Intent(login_activity.this, MainActivity.class);
@@ -100,11 +100,8 @@ public class login_activity extends AppCompatActivity {
                                     limpiarCajas();
                                     textVId_con.setText("Usuario o contraseña incorrecta, intente nuevamente");
                                 }
-
                             }
                         }
-
-
                     }
 
                     @Override
@@ -117,9 +114,10 @@ public class login_activity extends AppCompatActivity {
         });
         }
 
-
-
-
+    public void registrarUsuario(View v) {
+        Intent i = new Intent(this, RegisterActivity.class);
+        startActivity(i);
+    }
 
 
 
@@ -136,6 +134,7 @@ public class login_activity extends AppCompatActivity {
         }
     }
 
+
     //MEtodo para cerrar el teclado lugo que hagan click en iniciar sesion
     private void cerrarTeclado() {
         View view = this.getCurrentFocus();
@@ -143,8 +142,8 @@ public class login_activity extends AppCompatActivity {
             InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(view.getWindowToken(),0);
         }
-
     }
+
 
     //Metodo para limpiar textbox
     private void limpiarCajas() {

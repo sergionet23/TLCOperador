@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TLCOperador</string>
+    <string name="app_name">TLC - Operador</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Juan de los Palotes</string>
@@ -17,7 +17,19 @@
     <string name="todo">TODO</string>
     <string name="btnIniciarSesion">Iniciar Sesion</string>
     <string name="btnResgistrarse">Registrarse</string>
-    <string name="titulo_bienvenido">Bienvenido a\nTe Lo Cuido - Operadores</string>
-    <string name="some_id">**** 003</string>
+    <string name="titulo_bienvenido">Bienvenido a\nTe Lo Cuido</string>
+    <string name="some_id">***** 003</string>
     <string name="total_trans">Total  transacciones del d\u00C3\u00ADa</string>
+    <string name="register_btnEnviarDatos">Enviar Datos</string>
+    <string name="register_nombre">Nombre</string>
+    <string name="register_apellido">Apellido</string>
+    <string name="register_celular">Celular</string>
+    <string name="register_Email">Email</string>
+    <string name="register_contrasena">Contraseña</string>
+    <string name="register_contrasena2">Confirmar Contraseña</string>
+    <string name="Hora_inicio">Hora Inicio Trabajo</string>
+    <string name="Hora_fin">Hora Fin de trabajo</string>
+    <string name="Tipo_operador">Tipo operador</string>
+    <string name="Nombre_ubicacion">Cuidacoches o Parking</string>
+    <string name="Ci_operador">Cedula de identidad</string>
 </resources>

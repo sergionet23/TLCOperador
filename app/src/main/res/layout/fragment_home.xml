@@ -60,7 +60,7 @@
             android:textAlignment="center"
             android:textSize="50dp"
             android:inputType="number"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textStyle="bold" />
 
         <Button
